@@ -59,13 +59,16 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.3; }
         }
+        .text-2x-4xl {
+            font-size: 4.5rem; /* Exactly 2x text-4xl (2.25rem * 2 = 4.5rem) */
+        }
     </style>
 </head>
 <body class="bg-gmb-orange flex items-center justify-center min-h-screen">
     <div class="p-8 max-w-lg w-full text-center">
         <h1 class="text-2xl font-bold mb-4 text-white">
             It would take<br>
-            <span id="lifetimes" class="text-4xl font-bold flash"></span><br>
+            <span id="lifetimes" class="text-2x-4xl font-bold flash"></span><br>
             to earn as much as the founder of Amazon.
         </h1>
         <div id="error" class="text-red-300 mb-6"></div>
