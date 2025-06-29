@@ -68,14 +68,14 @@
             <span id="lifetimes" class="text-4xl font-bold flash"></span><br>
             to earn as much as the founder of Amazon.
         </h1>
-        <p id="result" class="text-white mb-6"></p>
+        <div id="error" class="text-red-300 mb-6"></div>
         <h2 class="text-xl font-semibold mb-4 text-white">Think that’s unfair? Join the GMB Trade Union</h2>
-        <p class="text-white mb-4">If you work for Amazon in the North West, and you want to organise for better pay and conditions, as well as protecting your rights at work, then you should join the trade union for Amazon workers, GMB, by clicking the link below. If you want more information before joining GMB, then send a quick WhatsApp message to the union’s Amazon organiser (everything you say is confidential and won’t be shared with the company).</p>
+        <p class="text-white mb-4">If you work for Amazon in the North West, and you want to organise for better pay and conditions, as well as protecting your rights at work, then you should join the trade union for Amazon workers, GMB, by clicking the link below. If you want more information before joining GMB, then send a quick WhatsApp message to the union’s Amazon organiser in the North West (everything you say is confidential and won’t be shared with the company).</p>
         <ul class="list-none text-center mb-6">
-            <li><a href="https://www.gmb.org.uk/join" target="_blank" class="text-white bg-purple-500 inline-block px-2 py-1 rounded font-bold hover:bg-purple-600 transition">Join GMB - the trade union for Amazon workers</a></li>
-            <li class="mt-4"><a href="#" target="_blank" class="text-white bg-purple-500 inline-block px-2 py-1 rounded font-bold hover:bg-purple-600 transition">Click here to confidentially message the union organiser for Amazon for free</a></li>
+            <li><a href="https://wa.me/message/JDHUS34BJJFTB1" target="_blank" class="text-white bg-purple-500 inline-block px-2 py-1 rounded font-bold hover:bg-purple-600 transition">Click here to confidentially Whatsapp the union organiser for Amazon in the North West</a></li>
+            <li class="mt-4"><a href="https://www.gmb.org.uk/join" target="_blank" class="text-white bg-purple-500 inline-block px-2 py-1 rounded font-bold hover:bg-purple-600 transition">Join GMB - the trade union for Amazon workers</a></li>
         </ul>
-        <a href="index.html" class="block text-center bg-blue-500 text-white p-2 rounded hover:bg-blue-600 transition">Back to Calculator</a>
+        <a href="index.html" class="block text-center bg-purple-500 text-white p-2 rounded hover:bg-purple-600 transition">Back to Calculator</a>
     </div>
 
     <script>
@@ -85,10 +85,10 @@
             const bezosWealth = 174511000000; // £174.511 billion
             const yearsPerLifetime = 50;
 
-            const resultDiv = document.getElementById('result');
+            const errorDiv = document.getElementById('error');
             const lifetimesSpan = document.getElementById('lifetimes');
             if (!wage || wage <= 0) {
-                resultDiv.innerHTML = '<span class="text-red-300">Invalid wage provided. Please go back and enter a valid wage.</span>';
+                errorDiv.innerHTML = 'Invalid wage provided. Please go back and enter a valid wage.';
                 lifetimesSpan.textContent = '';
                 return;
             }
@@ -96,7 +96,6 @@
             const totalLifetimes = (bezosWealth / wage) / yearsPerLifetime;
             const formattedLifetimes = Math.ceil(totalLifetimes).toLocaleString();
             lifetimesSpan.textContent = `${formattedLifetimes} lifetimes`;
-            resultDiv.innerHTML = `of your yearly wage (£${wage.toLocaleString()}) to match the founder of Amazon’s wealth of £174.5 billion.`;
         }
 
         // Run calculation on page load
